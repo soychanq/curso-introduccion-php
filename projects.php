@@ -1,16 +1,14 @@
 <?php
 
-use App\Models\{Job, Project, Printable};
+use App\Models\{Project, Printable};
 
-$jobs = Job::all();
-      function printElement($job) {
-       /*  if($job->visible == false) {
-          return;
-        } */
+$projects = Project::all();
+
+      function printProjects($projects) {
         echo '<li class="work-position">';
-        echo '<h5>' . $job->title . '</h5>';
-        echo '<p>' . $job->description . '</p>';
-        echo '<p>' . $job->getDurationAsString() . '</p>';
+        echo '<h5>' . $projects->title . '</h5>';
+        echo '<p>' . $projects->description . '</p>';
+        echo '<p>' . $projects->getDurationAsString() . '</p>';
         echo '<strong>Achievements:</strong>';
         echo '<ul>';
         echo '<li>Lorem ipsum dolor sit amet, 80% consectetuer adipiscing elit.</li>';
