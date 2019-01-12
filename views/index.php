@@ -1,15 +1,3 @@
-<?php
-use App\Models\Job;
-use App\Models\Project;
-require_once 'vendor/autoload.php';
-
-require_once('jobs.php');
-require_once('projects.php');
-
-$name = 'Alejandro Chanquín';
-$limitMonths = 2000;
-
-?>
 <!doctype html>
 <html lang="en">
 
@@ -72,7 +60,7 @@ $limitMonths = 2000;
             <ul>
             <?php
             for($idx = 0;$idx < count($projects); $idx++) {
-              printProjects($projects[$idx]);
+              printElement($projects[$idx]);
             }
             ?>
             </ul>

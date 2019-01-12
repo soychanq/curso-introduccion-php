@@ -1,15 +1,3 @@
-<?php
-
-use App\Models\Job;
-
-if (!empty($_POST)) {
-    $job = new Job();
-    $job->title = $_POST['title'];
-    $job->description = $_POST['description'];
-    $job->save();
-}
-
-?>
 <html>
     <head>
         <!-- Required meta tags -->
@@ -24,7 +12,7 @@ if (!empty($_POST)) {
     </head>
     <body>
         <h1>Add Job</h1>
-        <form action="addJob.php" method="POST">
+        <form action="add" method="POST">
             <label for="">Title:</label>
             <input type="text" name="title"><br>
             <label for="">Description:</label>
